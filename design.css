@@ -1,0 +1,242 @@
+/* 
+1- Syntax structure :
+    selector { 
+    property: value;
+    property: value;    
+    }
+2- the selector could be (elements or class or id) : 
+    A- elements => elements {
+    property: value;
+    }
+    B- class =>here it will formating any elements has its name  .(class name) {
+    property: value;
+    }
+    C- id => #(id name){
+    property: value;
+    }
+3- there are three way to coding styling : 
+    A- external style (as a exeternal file)
+    B- internal style (in duoble style tag in html)
+    C- inline style (inside elements )
+NOTE: inline style is the storgest way 
+4- there are three ways to choose the color :
+    A- from its name 
+    B- from this function : rgb(number number number /Aensity)
+    C- hexadecimal way : #number number number => (#FFAABB)
+5- there are three type of elements : 
+    A- block elements :
+        - respect padding,margin,width and height
+        - add line break
+        - take full width of no width
+    B- Inline elements :
+        - doesnt add new line 
+        -doesnt respect width and height
+        -just respect left and right in (padding + margin)
+    c- Inline-block elements : 
+        - Add new line 
+        - respect width,hieght,padding,mragin
+        - doesnt take a full width 
+6- there are some formatting for text :
+    A- text-align : (left-center-right)
+    B- direction : (ltr or rtl )
+    C- text-decoration-line : we use it to delete the under line from links
+    D- text-transform : 
+        -uppercase (to make all letters capitla)
+        -capitalize (to make the first letter form each word capital)
+    E- letter-spacing : (Make the letters spaced apart)
+    F- word-spacing : (Make the words spaced apart)
+    G- text-indent : Its like a left padding 
+    H- line-height : height between lines
+    I- white-space : nowrap(تسمح للكلام الزائد عن عرض العنصر بالبقاء على نفس السطر )
+    J- word-break : break-word ( prevent overflow )
+    K- text-overflow (ellipsis ) + overflow (hidden): it put points instead of extra words
+7- there are some type of css units :
+    A- em => one time of body size 
+    B- rem => one time of root page size (Html)
+8- mouse cursor => we can change cursor from (cursor)
+9- opacity => control of  alpha channel ( for element and background-color )  
+10- position : there many values to it
+    A- static => make position static 
+    B- relativ => ( بحرك العنصر بالنسبة لنفسه يعني اذا كتبنا تعليمة التحريك لفوق بيتحرك من ماكنو مباشرة وبالنسبة لحالو مش بالنسبة للصفحة) 
+    C- absolute => ( بتحرك العنصر بناءََ على الأب الي العنصر في , وبتخلي العنصر يطلع برا اطار العمل )
+        -(إذا حطينا ضمن عنصر محدد وصار هالعنصر أب الو لازم يكون البوزيشن للأب ريلاتف ليتحقق الأبسوليوت)
+    D- fixed => (بيتحرك بناء على الصفحة و بيثبت مكانو مع السكروول )
+    C- sticky => (يستعمل كالفيكسيد لكن للنافيغيشن بار مشان يخلي الروابط الي فوق معنا ونحنا عمنعمل سكروول)
+11- z-index => (لا يمكن استعمالها إلا عندما نعطي للعنصر بوزيشن معين وهي تقوم بتفضيل عنصر عنصر في العلوّ عن غيره من خلال اعاطئه الرقم الاعلا)
+12- list-style: (list-style-type)(list-style-position)(list-style-image)
+13- pseudo classes : (هناك العديد الكلاسات الزائفة ومنها ) 
+    A- hover => (يغير طريقة عرض العنصر عند الوقوف عليه )
+    B- checked => (عند الضغط على احد عناصر التشيك بوكس تقوم بحدث معين )
+    C- visited => (تستخدم لتمييز الروابط ببعض الخواص التي تم زيارتها من قبل )
+    D- focus => (تستخدم مثلا لتغيير لون البوردر اثناء الكتابة في إنبوت ما )
+14- pseudo elements => (نستخدمها في حال عدم القدرة للوصول لصفحة الأتش تي أم أل ويكون العنصر موجود فقط في صفحة السي أس أس )
+    A- first-letter : access to first letter from the element 
+    B- fist-line : access to first line from the element
+    C- selection : access to color selection method
+    D- after + before : access to posotions before and after the elements 
+***VERY IMPORTANT NOTE : any pseudo element doesnt work with out (content) inside it 
+    E- content : attr( name counter ) + counter-increment : name-counter ( inside father or all element)
+    that make to us counter for elements
+    F- content:( name of attribute ) we can dispaly attribute thruogh it
+15- box-sizing: (border-box) Allows items to come next to each other even if we give them borders and padding
+16- box-shadow : h v blur spread color 
+17- transition: properties (all or names of porpetry) , transition-deuration (second or mell second) , transition-delay(s or ms ), 
+    transition-timing-function (ease or ease-in or ease-in-out or linear)
+18- !important : it allows us to override formatting like internal and inline styling
+19-{{{{{{{{{{{        Flex Box        }}}}}}}}}}}} :
+    A- For Parent :
+        1- display: flex => to start flexible box 
+        2- flex-direction: 
+            --row => defualt value (Make the content go with the direction of our website rtl or ltr )
+            --row revers => (reverse elements without change page flow )
+            -- column => (it make the items under each other)
+            -- column-revers => (it make the items under each other but revers)
+        3-flex-wrap: no-wrap => defualt value (it put the items between each other until if there are no width)
+        4- flex-flow : it is shourt-hand for (2+3) 
+        
+************************************************
+
+        5- justify-content : 
+            1-flex-start => defualt vlaue
+            2-flex-end => (جعل السطر الاخير بعكس اتجاه الصفحة )
+            3-center => (توسيط المحتوى عرضياً)
+        6- justify-content :
+            1- space-between (The remaining width from the father is shared as a margin among the sons, but only from the inside)
+            2- space-around (The remaining supply of the father is shared as a margin between the sons, but inside and out)
+            3- space-evenly (بالتساوي قبل وبعد العنصر )
+
+************************************************
+
+        7- align-item : (لتحريك محتويات العنصر طوليا )
+
+************************************************
+
+        8- align-content : (لتحريك المحتوى كامل + يمكننا بوساطته وضع مسافات بين العناصر طوليا +تحدد المسافة بين السطور )
+    B- For child :
+        1- flex-grow : 0 => defualte value And 1 makes All element fill all width of father(without space)
+        2- flex-shrink : 1 => defualte value we can determine the element who will shrink before other elements 
+        3- order : 0 => defualte valuethe element which has the biggest value will be in the end and smallest value in first  
+        4- flex-basis : auto => default vlaue (it handle with width when direction of flex row and with height when direction is column)
+        5- flex : 0 1 auto ( it shourthand for flex-grow,flex-shrink,flex-basis )
+        align-self : auto => defualt value ( it allow to override the align-item from father)
+20- filter for image ( filter ) : 
+    A- grayscale(100%) => white and black
+    B- blure ( px ) make image blure  
+21- caret-color : color;
+22- pointer-events : none ( To make an element without properties ) 
+23- linear-gradiant : we can use it in border-image
+24- *********** Grid ***********
+    A- for parent :
+        1- display : grid | inline grid 
+        2- grid-template-columns : => [ number of columns  in ] => [ px , % , Auto , repeat() , fraction  , Mix ] 
+        NOTE : fraction is greedy but the auto is shy
+        3- grid-template-rows : => [ number of rows in ] => [ px , % , auto , repeat , fraction , mix ]
+        4- justify-content : as flex box 
+        5- grid-template-areas : we use it inside the parent " many names ( this is row number one ) " " many names ( this is row number tow )" 
+        B- for Child : 
+        1- grid-column : merge columns 
+        -( from position / to position-1 ) 
+        -OR span( number of columns ) 
+        -OR ( form where / span ( number of columns ) )
+        2- grid-row : merge rows 
+        -( from position / to position-1 ) 
+        -OR span( number of rows ) 
+        -OR ( form where / span ( number of rows ) )
+        3- Grid-area : [grid row start] [grid column start] [grid row end] [ grid column end] 
+        ( we use this if we want to start changing from specific area )
+        4- grid-area : we use it inside childs to differentiate between one element and another
+25- transform for 2D: 
+    A- scale : 
+    B- rotate : 
+    C- translate : 
+    D- skew : 
+    E- matrix : ( scaleX(),skewY(),skewX,scaleY(),translatex(),translateY())
+25- transform-orign : ( from where (x)) ( from where (y))
+26- perspective : (number px) it is the distance between screen and we put it inside parent 
+27- perspective-orign : we look to element from where ... and we put it inside parent 
+28- animation-name : name of keyframes
+29- animation-duration : time of animation 
+30- animation-iteration-count : how many times will animation repeat (number or infinit)
+31- animation-timing-function : (ease or ease-in or ease-in-out or linear)
+32- animation-direction : reverse or  alternate ( the animation finishes and come back again) alternate-reverse
+33- animation-delay : How long will animation wait before starting
+34- animation-fill-mode : forwarde ( the animation takes the latest keyframe style)
+35- animation-play-state : running ( is the defualt value ) or paused 
+36- animation : name duration timing-function  delay iteration-count direction
+37- Css selector : 
+=========
+== part 1 == 
+=========
+    A- Element => [p, div]
+    B- Element otherElement => [div p ]
+    C- .class-name 
+    D- #id-name 
+    E- .parent .child 
+    All of (a+b+c+d+e is old but the next is new )
+    F- .class-name-one.class-name-two => (one elemente has more than one name )
+    G- .class-name Element = > .class-name div 
+    H- Element.class-name = > (just the element which will be effected from changes until if there are many elements that have the same class-name but different from type of the main element )
+    J- parent > .child  => (just the direct childs of parent will be effected ) 
+=========
+== part 2 ==
+=========
+    K- Element + other-element => [div + p] ( p under </div> directly ) 
+    L- Element ~ other-elements => [p ~ div] (all div under </p> directly)
+    M- [Attribute]
+    N- element[Attribute]
+    O- [Attribute="value"]
+    P- element[Attribute="value"]
+    Q- [Attribute~="word"] => ( just word )
+    R- element[Attribute*="subString"]
+    S- element[Attribute^="value"] = >(start attribute with a value)
+=========
+== part 3 ==
+=========
+    T- Element:first-child => [p:first-child] (type of element is (p) and it must be the first element in its father )
+    U- Element:last-child => [p:last-child] (type of element is (p) and it must be the last element in its father )
+    V- Element:first-of-type => ( the first element appear )
+    W- Element:last-of-type => ( the last element in its father )
+    X- Element:only-child
+    Y- Element:only-of-type
+=========
+== part 4 ==
+=========
+    - element:not(selectors)
+    - element:nth-child(number of element) (we put even and odd inside it)
+    - element:nth-last-child(n)
+    - element:nth-of-type()
+    - element:nth-last-of-type()
+=========
+== part 5 ==
+=========
+    - :root 
+    - :checked
+    - :empty
+    - :disabled
+    - :required
+    - :focus 
+    - ::selection
+    - ::placeholder
+
+
+*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.shape-one p {
+    padding: 20px;
+    color: blue;
+}
+
+.shape-one hr {
+    border: 5px solid;
+}
+
+.shape-one p+hr {
+    width: 50%;
+}

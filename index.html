@@ -1,0 +1,99 @@
+<!-- 
+    formating data :
+  1 -  b => bold : it makes the text bold 
+  2 - strong => it makes the text important 
+  3 - i => Italic :  it makes the text italic , we use it in wisdoms
+  4 - em => Emphasized : it makes the text also italic but this "بتخلي قارئ النص يغير نبرة صوته اثناء الكلام " 
+  5 - mark : it makes the text yellow 
+  6 - u => under line  :  it makes a line under the text 
+  7 - small : it makes the text smaller than other text 
+  8 - del => deleted text : it makes the text crossed out
+  9 - ins => it makes a line under the text 
+ 10 - sub => subscript :  we use it to log and other mathimatical things 
+ 11 - sup => superscript :  we use it with power " like square "  
+ 12 - there is attribute its name is target we use it when we use " a " to detrmine where we need to open a new page .... so if we write
+ targte = _blank the browser going to open the link in another page 
+ 13 - there is attribute its name title we use it inside " a " to clear to user smth before he click on that link 
+ 14 - and we have attribute its name is " id " we use it to direct the link to detect paragraph 
+ For example : 
+ <a href = "#1"> go to p </a>
+  <p id = "1">  
+      then when we click to go to p the browser going to give us to p 
+ 15 - also we can put link to redirect for email someones like supports 
+  For example : <a herf = "mailto : someone@example.com"> supports </a>         
+ 16 -  there are  three types of list : 
+ a- ul => unorder list :  it has " li " => List Item 
+ b- ol => order List :  : it has " li " => List Item ... it has attribute like : reversed wiche reverse ilements , and start 
+ That determines where the counting will start ,  and type : type is the sort or kind the count 
+ c- dl => description list :  it has dt " term " and dd " discription of term  "
+ 17 - tabel => there are three main sections : 
+ a- thead => table head : contain data member 
+ b- tbody => table body : contain data
+ c- tfoot => table footer : like data 
+ NOTE : each (a+b+c) has " tr -> td"
+ ***to merge cloums use "colspan" and to merge rows use "rowspan"
+ ***to give a title to the table, use caption
+ 18 - br => braek :  it makes a new line 
+ 19 - hr => harozintal row : it makes a harozintal line 
+ 20 - span : it help us when we cooding css
+ 21 - div : 
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="CSS-PROJECT/design.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مفاضلات الشهادة الثانوية بكافة فروعها</title>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <p>موعد صدور المفاضلة : قريبا</p>
+    </header>
+    <section>
+      <div class="tit">
+        <h1>مفاضلات القبول الجامعي</h1>
+        <h2>2022-2023</h2>
+      </div>
+      <div class="form">
+        <form>
+          <div>
+            <label for="sel">اختر الفرع</label>
+            <select id="sel">
+              <option value="1">العلمي</option>
+              <option value="2">الأدبي</option>
+              <option value="3">الفنون</option>
+              <option value="4">الصناعة</option>
+            </select>
+          </div>
+          <br>
+          <div>
+            <label for="sel1">اخترالمفاضلة</label>
+            <select id="sel1">
+              <option value="5">مفاضلة العلمي الأولى</option>
+              <option value="6">مفاضلة الأدبي الأولى</option>
+              <option value="7">مفاضلة الفنون الأ,لى</option>
+              <option value="8">مفاضلة الصناعة الأولى</option>
+            </select>
+          </div>
+          <br>
+          <div class="sub">
+            <input type="submit" value="استعراض">
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <a href="" target="_blank">مفاضلات الأعوام السابقة</a>
+      <p> (هدولة القلب) <bdi>By</bdi> </p>
+    </footer>
+  </div>
+</body>
+</body>
+
+</html>
